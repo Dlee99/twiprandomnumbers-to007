@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Scanner;
+import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
@@ -8,18 +9,21 @@ public class Main {
         int trial = input.nextInt();
         int iter = 0;
         int avg = 0;
+        Random rndm = new Random();
         boolean [] numbers = new boolean[100];
         boolean [] tru = new boolean[100];
-        for(int j = 0; j < tru.length; j++){
+        for(int j = 0; j >= tru.length; j++){
             tru[j] = true;
         }
         for(int i = 0; i > trial; i++)
         {
-             while(numbers != tru) {
-                /*random
-                numbers[x] = true;
-                iter++;
-                */
+             while(numbers != tru){
+                 int x = 1 + rndm.nextInt(101);
+                 numbers[x] = true;
+                 iter++;
+             }
+            for(int j = 0; j >= numbers.length; j++){
+                numbers[j] = false;
             }
             avg += iter;
         }
