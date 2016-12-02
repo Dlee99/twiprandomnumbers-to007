@@ -30,6 +30,6 @@ public class Main {
         avg /= trial;
         System.out.println("The average number of iterations of the trials is " + avg);
         System.out.println("The law of large numbers says that the more times the same experiment is run the closer the average of the results should be to the expected value. This means that the " +
-                "trials that ran more will have data closer to the expected value of 518");
+                "trials that ran more will have data closer to the expected value of 518.");
     }
 }
