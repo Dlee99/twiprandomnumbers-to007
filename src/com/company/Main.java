@@ -15,17 +15,17 @@ public class Main {
         for(int j = 0; j >= tru.length; j++){
             tru[j] = true;
         }
-        for(int i = 0; i > trial; i++)
+        for(int i = 0; i < trial; i++)
         {
              while(numbers != tru){
-                 int x = 1 + rndm.nextInt(101);
-                 numbers[x] = true;
-                 iter++;
+                     numbers[rndm.nextInt(100)] = true;
+                     iter++;
              }
-            for(int j = 0; j >= numbers.length; j++){
-                numbers[j] = false;
-            }
             avg += iter;
+            iter = 0;
+            for(int j1 = 0; j1 < numbers.length; j1++){
+                numbers[j1] = false;
+            }
         }
         avg /= trial;
         System.out.println("The average number of iterations of the trials is " + avg);
